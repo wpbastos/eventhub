@@ -1,8 +1,8 @@
-output "event-hubs-ns-name" {
-  value = azurerm_eventhub_namespace.eventhub_namespace.name
+output "namespace_name" {
+  value = azurerm_eventhub_namespace.namespace.name
 }
 
-output "event-hub-keys" {
+output "keys" {
   description = "Map of hubs with keys => primary_key mapping."
   sensitive   = true
   value = { for k in azurerm_eventhub_authorization_rule.authorization_rule : k.name => {

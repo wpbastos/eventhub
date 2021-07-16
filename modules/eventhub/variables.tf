@@ -54,7 +54,7 @@ variable "authorization_rules" {
   default = []
 }
 
-variable "event-hubs" {
+variable "eventhubs" {
   description = "A list of event hubs to add to namespace."
   type = list(object({
     name              = string
